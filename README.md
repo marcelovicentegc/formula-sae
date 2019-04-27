@@ -15,9 +15,9 @@ The concept behind Formula SAE is that a fictional manufacturing company has con
 | Current     |                           |
 | Gyroscope   | Steering                  |
 
-| Information flow possibilities                                                                                                                                                   |
-| -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Data -> Simultaneous multiple data sensing -> Sensor -> Data -> Wireless and instantaneous transmission for over a X distance (to pit and race team) -> Display -> Fast feedback |
+| Information flow possibilities                                                                                                                                                                 |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Data -> Simultaneous multiple data sensing -> Sensor -> Data (logged data) -> Wireless and instantaneous transmission for over a X distance (to pit and race team) -> Display -> Fast feedback |
 
 | Possible technologies                                    | Features      |
 | -------------------------------------------------------- | ------------- |
@@ -88,3 +88,27 @@ Can provides the basis for communication - but not a lot more. For example, the 
 
 - CANOpen
   - CANOpen is used widely in industrial automation applications. It builds on CAN, in terms of physical layer (lines used, voltages, etc.) and the data link layer, utilizing a CAN frame message based protocol.
+
+## Formula SAE Ufba
+
+- Systems (teams)
+  - Management
+    - Technical, adminitrative
+  - Eletronic
+    - Sensoring, telemetry
+  - Suspension
+  - Drivetrain
+    - Motor transmission
+  - Powertrain
+    - Admission, cooling, exaustion
+  - Breaks
+  - Aerodynamics
+  - Structure
+    - Chassi
+
+| Calendar                      |
+| ----------------------------- |
+| May/June: sensoring deadline  |
+| August: tests                 |
+| September: telemetry deadline |
+| November/December: contest    |
