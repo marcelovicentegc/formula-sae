@@ -60,17 +60,17 @@ The CAN standard allows ECUs to communicate with each other without complex wiri
     - Audio system
   - A modern car can have up to 70 ECU's (2019)
 
-- A CAN message
-  | Bit | Message part | Function |
-  | --- | ------------ | ----------- |
-  | 1 | SOF (Start of Frame) | Lets other ECUs know that a message is coming |
-  | 29 | **CAN ID**\* | Contains the message priority. As well as functional address (i.e. RPM, wheel speed, etc.) |
-  | 1 | RTR (Remote Transmission Request) | Allows ECUs to request messages from other ECUs |
-  | 6 | **CONTROL**\* | Informs the length of the data in bytes |
-  | 0-64 | **DATA**\* | Contains the actual data values, which need to be scaled or converted to be readable and ready for analysis |
-  | 16 | CRC (Cyclic Redundancy Check) | Checks data integrity |
-  | 2 | ACK | Indicates if the CRC process is OK |
-  | 7 | EOF (End of Line) | Marks the end of the CAN message |
+**A CAN message**
+| Bit | Message part | Function |
+| --- | ------------ | -------- |
+| 1 | SOF (Start of Frame) | Lets other ECUs know that a message is coming |
+| 29 | **CAN ID**\* | Contains the message priority. As well as functional address (i.e. RPM, wheel speed, etc.) |
+| 1 | RTR (Remote Transmission Request) | Allows ECUs to request messages from other ECUs |
+| 6 | **CONTROL**\* | Informs the length of the data in bytes |
+| 0-64 | **DATA**\* | Contains the actual data values, which need to be scaled or converted to be readable and ready for analysis |
+| 16 | CRC (Cyclic Redundancy Check) | Checks data integrity |
+| 2 | ACK | Indicates if the CRC process is OK |
+| 7 | EOF (End of Line) | Marks the end of the CAN message |
 
 Can provides the basis for communication - but not a lot more. For example, the CAN standard does not specify how to handle messages larger than 8 bytes - or how to decode the raw data. Therefore, a set of standardized protocols exist to further define how data is communicated between ECUs of a given network. Somme of the most common and encountered standards include _SAE J1939_, _OBD-II_ and _CANOpen_.
 
