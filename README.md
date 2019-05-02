@@ -90,7 +90,7 @@ Can provides the basis for communication - but not a lot more. For example, the 
 - CANOpen
   - CANOpen is used widely in industrial automation applications. It builds on CAN, in terms of physical layer (lines used, voltages, etc.) and the data link layer, utilizing a CAN frame message based protocol.
 
-## Formula SAE Ufba
+## KRT (Kamikaze Racing Team) Ufba
 
 - Systems (teams)
   - Management
