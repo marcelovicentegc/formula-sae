@@ -10,7 +10,7 @@ void setup()
 void loop()
 {
     rawSensorData = analogRead(sensor);
-    float celsius = (rawSensorData * 500) / 1024;
+    float celsius = (rawSensorData * 500) / 1023;
     float fahrenheit = (celsius * 1.8) + 32;
 
     Serial.print("Temperatura: ");
