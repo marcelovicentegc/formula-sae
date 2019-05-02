@@ -1,7 +1,10 @@
 # Sensors
 
-- lm35
-- mlx90614
+| Sensor agency | Sensor |
+| ------------- | ------ |
+| Temperature | lm35 |
+| Temperature | mlx90614 |
+| Gyro | mpu6050 dmp6 |
 
 ## Data Logging
 
