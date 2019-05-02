@@ -3,6 +3,10 @@
 - lm35
 - mlx90614
 
+## Data Logging
+
+Sources: [Using the SD library to log data](https://www.arduino.cc/en/Tutorial/Datalogger), [Easy Arduino Temperature Logger](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/easy-arduino-temperature-logger/)
+
 ## Simulating on Fritzing
 
 1. Prototype board circuits on Fritzing.
