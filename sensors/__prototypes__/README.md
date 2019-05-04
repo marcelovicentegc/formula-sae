@@ -25,7 +25,7 @@
 5. Select Arduino's version you would like to emulate.
     - If the Arduino version you want is not available, look for it online, or build one.
     - If that was the case and you want to prototype over an `Arduino Mega 2560`, follow these steps:
-        1. Extract [this zip file](https://github.com/marcelovicentegc/formula-sae/sensors/_prototypes_/Arduino%Mega%2560%Library%for%Proteus.rar).
+        1. Extract [this zip file](https://github.com/marcelovicentegc/formula-sae/blob/master/sensors/__prototypes__/assets/Arduino%20Mega%202560%20Library%20for%20Proteus.rar).
         2. Grab the `ArduinoUnoTEP.LIB` and `ArduinoUnoTEP.IDX` files and move them to Proteu's `LIBRARY` folder.
         3. Be happy
 
