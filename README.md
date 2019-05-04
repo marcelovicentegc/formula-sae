@@ -19,9 +19,11 @@ The concept behind Formula SAE is that a fictional manufacturing company has con
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Data -> Simultaneous multiple data sensing -> Sensor -> Data (logged data) -> Wireless and instantaneous transmission for over a X distance (to pit and race team) -> Display -> Fast feedback |
 
-| Possible technologies                                    | Features      |
-| -------------------------------------------------------- | ------------- |
-| `Sensor -> Arduino ->` CAN bus -> Raspberry Pi -> Client | Wifi extender |
+| Possible technologies                       | Features      |
+| ------------------------------------------- | ------------- |
+| CAN bus -> Raspberry Pi -> Client           | Wifi extender |
+| Sensor -> Arduino -> Server -> Client       | Wifi extender |
+| Sensor -> Arduino -> Raspberry Pi -> Client | Wifi extender |
 
 Possible technologies sources:
 
