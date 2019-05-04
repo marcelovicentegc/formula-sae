@@ -1,9 +1,6 @@
 const int sensor = A0;
 float rawSensorData;
-
-Serial dataLogger;
-PrintWriter output;
-   
+int testLoop = 10;
 
 void setup()
 {
@@ -13,38 +10,36 @@ void setup()
 
 void loop()
 {
-    rawSensorData = analogRead(sensor);
-    float celsius = (rawSensorData * 500) / 1023;
-    float fahrenheit = (celsius * 1.8) + 32;
+    for (int a = 0; a < testLoop; a++)
+    {
+        rawSensorData = analogRead(sensor);
+        float celsius = (rawSensorData * 500) / 1024;
+        float fahrenheit = (celsius * 1.8) + 32;
 
-    Serial.print("Temperatura: ");
-    Serial.print(celsius);
-    Serial.print("*C");
-    Serial.println();
-    delay(1000);
+        Serial.print("Temperatura: ");
+        Serial.print(celsius);
+        Serial.print("*C");
+        Serial.println();
+        delay(2000);
 
-    /* Uncomment these lines to get temperature in fahrenheit 
-    Serial.print("Temperatura: ");
-    Serial.print(fahrenheit);
-    Serial.print("*F");
-    Serial.println();
-    */
+        // Uncomment these lines to get temperature in Kelvin
+        /* float kelvin = celsius + 273.15;
+      Serial.print("Temperatura em Kelvin: ");
+      Serial.print(kelvin);
+      Serial.println(); */
 
-   dataLogger = new Serial(this, Serial.list()[0], 9600);
-   output = createWriter("lm35_data_log.txt");
-}
+        // Uncomment these lines to get temperature in Fahrenheit
+        /* Serial.print("Temperatura: ");
+      Serial.print(fahrenheit);
+      Serial.print("�F");
+      Serial.println();
 
-void draw() {
-    if (dataLogger.available() > 0 ) {
-        String data = dataLogger.readString();
-        if ( data != null ) {
-            output.println( data );
-        }
+      Serial.print("Temperatura crua: ");
+      Serial.print(rawSensorData);
+      Serial.println();
+      */
     }
-}
 
-void keyPressed() {
-    output.flush(); // Writes the remaining data to the file
-    output.close(); // Finishes the file
-    exit(); // Stops the program
+    Serial.print("Completed test loop");
+    exit(0);
 }
