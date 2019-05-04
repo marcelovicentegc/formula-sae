@@ -2,10 +2,13 @@ import processing.serial.*;
 
 Serial dataLogger;
 PrintWriter output;
-   
+String logPath = "C:/Users/marce/Documents/Projects/Dev/Venvs/formula-sae/sensors/lm35/__datalog__/";
+String fileName = "lm35_data_log.txt"
+String port = "COM7";
+
 void setup () {
-   dataLogger = new Serial(this, Serial.list()[0], 9600);
-   output = createWriter("lm35_data_log.txt");
+   dataLogger = new Serial(this, port, 9600);
+   output = createWriter(logPath + fileName);
 }
 
 void draw()
