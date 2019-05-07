@@ -33,10 +33,10 @@ Sources: [Which microcontroller/microprocessor should I use to build a data acqu
 
 ---
 
-# CAN (Controller Area Network) bus
+## CAN (Controller Area Network) bus
 
 > _The vehicle nervous system_
-
+>
 > _A central networking system_
 
 The CAN standard allows ECUs to communicate with each other without complex wiring. This allows for several features to be added via software alone. That is the primary purpose of CAN: to allow any ECU to communicate with the entire system without causing an over load to the controller computer.
@@ -62,7 +62,7 @@ The CAN standard allows ECUs to communicate with each other without complex wiri
     - Audio system
   - A modern car can have up to 70 ECU's (2019)
 
-**A CAN message**
+## A CAN message
 
 | Bit  | Message part                      | Function                                                                                                    |
 | ---- | --------------------------------- | ----------------------------------------------------------------------------------------------------------- |
