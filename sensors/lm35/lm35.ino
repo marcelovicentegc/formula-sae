@@ -1,7 +1,11 @@
 const int sensor = A0;
 float rawSensorData;
-int testLoop = 10;
+int testLoop = 20;
 bool test = true;
+bool getKelvin = false;
+bool getFahrenheit = false;
+bool saveToTxt = true;
+bool saveToCsv = false;
 
 void setup()
 {
@@ -15,29 +19,37 @@ void getTemperature()
   float celsius = (rawSensorData * 500) / 1024;
   float fahrenheit = (celsius * 1.8) + 32;
 
-  Serial.print("Temperatura: ");
-  Serial.print(celsius);
-  Serial.print(" C");
-  Serial.println();
-  delay(2000);
+  if (saveToTxt == true)
+  {
+    Serial.print("Temperature: ");
+    Serial.print(celsius);
+    Serial.print(" C");
+    Serial.println();
+    delay(2000);
 
-  // Uncomment these lines to get temperature in Kelvin
-  /* float kelvin = celsius + 273.15;
-  Serial.print("Temperatura: ");
-  Serial.print(kelvin);
-  Serial.print(" K");
-  Serial.println(); */
+    if (getKelvin == true)
+    {
+      float kelvin = celsius + 273.15;
+      Serial.print("Temperature ");
+      Serial.print(kelvin);
+      Serial.print(" K");
+      Serial.println();
+    }
 
-  // Uncomment these lines to get temperature in Fahrenheit
-  /* Serial.print("Temperatura: ");
-  Serial.print(fahrenheit);
-  Serial.print(" F");
-  Serial.println();
+    if (getFahrenheit == true)
+    {
 
-  Serial.print("Temperatura crua: ");
-  Serial.print(rawSensorData);
-  Serial.println();
-  */
+      Serial.print("Temperature in Fahrenheit: ");
+      Serial.print(fahrenheit);
+      Serial.print(" F");
+      Serial.println();
+    }
+  }
+
+  if (saveToCsv == true)
+  {
+    Serial.println(celsius);
+  }
 }
 
 void loop()
@@ -48,9 +60,11 @@ void loop()
     {
       getTemperature();
     }
-
-    Serial.print("Test loop completo.");
+    Serial.print("Test suit completed.");
     Serial.println();
+    // Since Arduino has no O.S., exit() is useless. There is no correct way to stop an Arduino program
+    // since it is supposed to loop forever. For output purposes, calling while(1) {} traps the program
+    // into a outputless loop, "stopping" it.
     while (1)
     {
     }

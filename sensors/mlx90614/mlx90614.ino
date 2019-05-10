@@ -14,7 +14,10 @@
  ****************************************************/
 #include <Wire.h>
 #include <Adafruit_MLX90614.h>
+
 Adafruit_MLX90614 mlx = Adafruit_MLX90614();
+boolean fahrenheit = false;
+
 void setup()
 {
     Serial.begin(9600);
@@ -28,11 +31,15 @@ void loop()
     Serial.print("*C\tObject = ");
     Serial.print(mlx.readObjectTempC());
     Serial.println("*C");
-    Serial.print("Ambient = ");
-    Serial.print(mlx.readAmbientTempF());
-    Serial.print("*F\tObject = ");
-    Serial.print(mlx.readObjectTempF());
-    Serial.println("*F");
+
+    if (fahrenheit == true)
+    {
+        // Serial.print("Ambient = ");
+        // Serial.print(mlx.readAmbientTempF());
+        // Serial.print("*F\tObject = ");
+        // Serial.print(mlx.readObjectTempF());
+        // Serial.println("*F");
+    }
     Serial.println();
-    delay(500);
+    delay(600);
 }

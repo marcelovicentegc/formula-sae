@@ -15,7 +15,8 @@
 | SD card                                        | Uncovered |
 | Database (via HTTP/MQTT)                       | Uncovered |
 
-Sources: [Using the SD library to log data](https://www.arduino.cc/en/Tutorial/Datalogger), [Easy Arduino Temperature Logger](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/easy-arduino-temperature-logger/), [How can I save data directly in the PC using an Arduino UNO?](https://www.researchgate.net/post/How_can_I_save_data_directly_in_the_pc_using_an_Arduino_UNO), [Connecting Arduino to Processing](https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all)
+Sources: [Using the SD library to log data](https://www.arduino.cc/en/Tutorial/Datalogger), [Easy Arduino Temperature Logger](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/easy-arduino-temperature-logger/), [How can I save data directly in the PC using an Arduino UNO?](https://www.researchgate.net/post/How_can_I_save_data_directly_in_the_pc_using_an_Arduino_UNO), [Connecting Arduino to Processing](https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all),
+[How to save data from Arduino to a .csv file using Processing](https://www.hackerscapes.com/2014/11/how-to-save-data-from-arduino-to-a-csv-file-using-processing/)
 
 ## Notes on Arduino + Processing
 

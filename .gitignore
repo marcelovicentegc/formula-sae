@@ -1,4 +1,5 @@
 .vscode
 *.Marcelo Cardoso.workspace
 *.pdsbak
-.txt
+*.txt
+*.csv
