@@ -15,9 +15,13 @@ void draw()
 {
     if (dataLogger.available() > 0)
     {
+        String date = str(year() + "-" + month() + "-" + day());
+        String hour = str(hour() + ":" + minute() + ":" + seconds());
         String data = dataLogger.readString();
         if (data != null)
         {
+            output.println(date);
+            output.println(hour);
             output.println(data);
         }
     }

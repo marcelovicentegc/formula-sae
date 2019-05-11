@@ -27,15 +27,15 @@ void getTemperatures()
 
     if (saveToTxt == true)
     {
-        Serial.print("LM35 temperature: ");
+        Serial.print("LM35 temp.: ");
         Serial.print(celsius);
         Serial.print(" C");
         Serial.println();
-        Serial.print("MLX90614 ambient temperature: ");
+        Serial.print("MLX90614 ambient temp.: ");
         Serial.print(mlx.readAmbientTempC());
         Serial.print(" C");
         Serial.println();
-        Serial.print("MLX90614 object temperature: ");
+        Serial.print("MLX90614 object temp.: ");
         Serial.print(mlx.readObjectTempC());
         Serial.print(" C");
         Serial.println();

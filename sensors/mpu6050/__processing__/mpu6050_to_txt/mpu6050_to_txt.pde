@@ -3,8 +3,8 @@ import processing.serial.*;
 Serial dataLogger;
 PrintWriter output;
 String logPath = "../../__datalog__/";
-String fileName = "wheel_data_log.txt";
-String port = "COM7";
+String fileName = "acc_gyro_log.txt";
+String port = "COM10";
 
 void setup () {
    dataLogger = new Serial(this, port, 9600);
