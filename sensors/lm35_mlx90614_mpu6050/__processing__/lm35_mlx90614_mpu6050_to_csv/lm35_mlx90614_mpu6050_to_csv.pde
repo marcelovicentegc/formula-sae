@@ -27,6 +27,12 @@ void setup () {
     dataTable.addColumn("LM35Temperature");
     dataTable.addColumn("MLX90614AmbientTemperature");
     dataTable.addColumn("MLX90614ObjectTemperature");
+    dataTable.addColumn("gForceX");
+    dataTable.addColumn("gForceY");
+    dataTable.addColumn("gForceZ");
+    dataTable.addColumn("GyX");
+    dataTable.addColumn("GyY");
+    dataTable.addColumn("GyZ");
 }
 
 void serialEvent(Serial dataLogger) {
@@ -45,9 +51,9 @@ void serialEvent(Serial dataLogger) {
             newRow.setFloat("LM35Temperature", sensorVals[0]);
             newRow.setFloat("MLX90614AmbientTemperature", sensorVals[1]);
             newRow.setFloat("MLX90614ObjectTemperature", sensorVals[2]);
-            newRow.setFloat("AcX", sensorVals[3]);
-            newRow.setFloat("AcY", sensorVals[4]);
-            newRow.setFloat("AcZ", sensorVals[5]);
+            newRow.setFloat("gForceX", sensorVals[3]);
+            newRow.setFloat("gForceY", sensorVals[4]);
+            newRow.setFloat("gForceZ", sensorVals[5]);
             newRow.setFloat("GyX", sensorVals[6]);
             newRow.setFloat("GyY", sensorVals[7]);
             newRow.setFloat("GyY", sensorVals[8]);

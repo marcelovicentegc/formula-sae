@@ -18,6 +18,10 @@
 Sources: [Using the SD library to log data](https://www.arduino.cc/en/Tutorial/Datalogger), [Easy Arduino Temperature Logger](http://henrysbench.capnfatz.com/henrys-bench/arduino-projects-tips-and-more/easy-arduino-temperature-logger/), [How can I save data directly in the PC using an Arduino UNO?](https://www.researchgate.net/post/How_can_I_save_data_directly_in_the_pc_using_an_Arduino_UNO), [Connecting Arduino to Processing](https://learn.sparkfun.com/tutorials/connecting-arduino-to-processing/all),
 [How to save data from Arduino to a .csv file using Processing](https://www.hackerscapes.com/2014/11/how-to-save-data-from-arduino-to-a-csv-file-using-processing/), [Display Arduino time without a RTC](https://www.youtube.com/watch?v=Jwdoah5Fg5g)
 
+## Notes on Arduino
+
+Sources: [Arduino Mega specs](http://www.mantech.co.za/datasheets/products/A000047.pdf)
+
 ## Notes on Arduino + Processing
 
 In order for Processing and Arduino to work together when data logging to host, Arduino's Serial Monitor must not be initialized, as Processing will listen to it's process and they might conflict.

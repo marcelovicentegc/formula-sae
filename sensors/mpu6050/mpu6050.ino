@@ -3,8 +3,8 @@
 int testLoop = 20;
 bool test = false;
 bool saveToTxt = false;
-bool saveToCsv = false;
-//Endereço padrão I2C do MPU6050
+bool saveToCsv = true;
+// Endereço padrão I2C do MPU6050
 const int MPU = 0x68;
 int AcX, AcY, AcZ, Tmp, GyX, GyY, GyZ;
 
@@ -21,17 +21,14 @@ void setup()
 
 void saveToTxtF()
 {
-    //Envia valor X do acelerometro para a serial e o LCD
-    Serial.print("AcX = ");
-    Serial.print(AcX);
+    Serial.print(" | gForceX: ");
+    Serial.print(AcX / 1638.4);
 
-    //Envia valor Y do acelerometro para a serial e o LCD
-    Serial.print(" | AcY = ");
-    Serial.print(AcY);
+    Serial.print(" | gForceY: ");
+    Serial.print(AcY / 1638.4);
 
-    //Envia valor Z do acelerometro para a serial e o LCD
-    Serial.print(" | AcZ = ");
-    Serial.print(AcZ);
+    Serial.print(" | gForceZ: ");
+    Serial.print(AcZ / 1638.4);
 
     //Envia valor da temperatura para a serial e o LCD
     //Calcula a temperatura em graus Celsius
@@ -40,36 +37,36 @@ void saveToTxtF()
 
     //Envia valor X do giroscopio para a serial e o LCD
     Serial.print(" | GyX = ");
-    Serial.print(GyX);
+    Serial.print(GyX / 131.0);
 
     //Envia valor Y do giroscopio para a serial e o LCD
     Serial.print(" | GyY = ");
-    Serial.print(GyY);
+    Serial.print(GyY / 131.0);
 
     //Envia valor Z do giroscopio para a serial e o LCD
     Serial.print(" | GyZ = ");
-    Serial.println(GyZ);
+    Serial.println(GyZ / 131.0);
 
     delay(300);
 }
 
 void saveToCsvF()
 {
-    Serial.print(AcX);
+    Serial.print(AcX / 1638.4);
     Serial.print(",");
-    Serial.print(AcY);
+    Serial.print(AcY / 1638.4);
     Serial.print(",");
-    Serial.print(AcZ);
+    Serial.print(AcZ / 1638.4);
     Serial.print(",");
     Serial.print(Tmp / 340.00 + 36.53);
     Serial.print(",");
-    Serial.print(GyX);
+    Serial.print(GyX / 131.0);
     Serial.print(",");
-    Serial.print(GyY);
+    Serial.print(GyY / 131.0);
     Serial.print(",");
-    Serial.print(GyZ);
+    Serial.print(GyZ / 131.0);
     Serial.println();
-    
+
     delay(300);
 }
 

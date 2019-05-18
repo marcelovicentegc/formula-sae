@@ -6,7 +6,7 @@ Table dataTable;
 
 String logPath = "../../__datalog__/";
 String fileName;
-String port = "COM10";
+String port = "COM5";
 
 boolean test = true;
 int numReadings;
@@ -24,13 +24,13 @@ void setup () {
     dataTable.addColumn("id");
     dataTable.addColumn("date");
     dataTable.addColumn("time");
-    dataTable.addColumn("aX");
-    dataTable.addColumn("aY");
-    dataTable.addColumn("aZ");
+    dataTable.addColumn("gForceX");
+    dataTable.addColumn("gForceY");
+    dataTable.addColumn("gForceZ");
     dataTable.addColumn("temperature");
-    dataTable.addColumn("gX");
-    dataTable.addColumn("gY");
-    dataTable.addColumn("gZ");
+    dataTable.addColumn("GyX");
+    dataTable.addColumn("GyY");
+    dataTable.addColumn("GyZ");
 }
 
 void serialEvent(Serial dataLogger) {
@@ -47,13 +47,13 @@ void serialEvent(Serial dataLogger) {
             newRow.setInt("id", dataTable.lastRowIndex());
             newRow.setInt("date", year() + month() + day());
             newRow.setInt("time", hour() + minute() + second());
-            newRow.setFloat("aX", sensorVals[0]);
-            newRow.setFloat("aY", sensorVals[1]);
-            newRow.setFloat("aZ", sensorVals[2]);
+            newRow.setFloat("gForceX", sensorVals[0]);
+            newRow.setFloat("gForceY", sensorVals[1]);
+            newRow.setFloat("gForceZ", sensorVals[2]);
             newRow.setFloat("temperature", sensorVals[3]);
-            newRow.setFloat("gX", sensorVals[4]);
-            newRow.setFloat("gY", sensorVals[5]);
-            newRow.setFloat("gZ", sensorVals[6]);
+            newRow.setFloat("GyX", sensorVals[4]);
+            newRow.setFloat("GyY", sensorVals[5]);
+            newRow.setFloat("GyZ", sensorVals[6]);
 
             if (test == true) {
                 readingCounter++;

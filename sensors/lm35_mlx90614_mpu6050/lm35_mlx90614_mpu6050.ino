@@ -53,20 +53,20 @@ void getTemperatures()
         Serial.println();
 
         // Acelerômetro
-        Serial.print("AcX = ");
-        Serial.print(AcX);
-        Serial.print(" | AcY = ");
-        Serial.print(AcY);
-        Serial.print(" | AcZ = ");
-        Serial.print(AcZ);
-        Serial.print(" | Tmp = ");
+        Serial.print("gForceX: ");
+        Serial.print(AcX / 1638.4);
+        Serial.print(" | gForceY: ");
+        Serial.print(AcY / 1638.4);
+        Serial.print(" | gForceZ: ");
+        Serial.print(AcZ / 1638.4);
+        Serial.print(" | Tmp: ");
         Serial.print(Tmp / 340.00 + 36.53);
-        Serial.print(" | GyX = ");
-        Serial.print(GyX);
-        Serial.print(" | GyY = ");
-        Serial.print(GyY);
-        Serial.print(" | GyZ = ");
-        Serial.println(GyZ);
+        Serial.print(" | GyX: ");
+        Serial.print(GyX / 131.0);
+        Serial.print(" | GyY: ");
+        Serial.print(GyY / 131.0);
+        Serial.print(" | GyZ: ");
+        Serial.println(GyZ / 131.0);
         delay(2000);
 
         if (getKelvin == true)
@@ -114,17 +114,17 @@ void getTemperatures()
         Serial.print(",");
         Serial.print(celsius);
         Serial.print(",");
-        Serial.print(AcX);
+        Serial.print(AcX / 1638.4);
         Serial.print(",");
-        Serial.print(AcY);
+        Serial.print(AcY / 1638.4);
         Serial.print(",");
-        Serial.print(AcZ);
+        Serial.print(AcZ / 1638.4);
         Serial.print(",");
-        Serial.print(GyX);
+        Serial.print(GyX / 131.0);
         Serial.print(",");
-        Serial.print(GyY);
+        Serial.print(GyY / 131.0);
         Serial.print(",");
-        Serial.print(GyZ);
+        Serial.print(GyZ / 131.0);
         Serial.println();
         delay(2000);
     }
