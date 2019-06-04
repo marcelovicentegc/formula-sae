@@ -11,8 +11,6 @@ The concept behind Formula SAE is that a fictional manufacturing company has con
 | Temperature | Coolant, batteries, motor |
 | Pressure    | Wheels' tires             |
 | Speed       | Motor, wheels             |
-| Voltage     |                           |
-| Current     |                           |
 | Gyroscope   | Steering                  |
 
 | Information flow possibilities                                                                                                                                                                 |
@@ -91,27 +89,3 @@ Can provides the basis for communication - but not a lot more. For example, the 
 
 - CANOpen
   - CANOpen is used widely in industrial automation applications. It builds on CAN, in terms of physical layer (lines used, voltages, etc.) and the data link layer, utilizing a CAN frame message based protocol.
-
-## KRT (Kamikaze Racing Team) Ufba
-
-- Systems (teams)
-  - Management
-    - Technical, adminitrative
-  - Eletronic
-    - Sensoring, telemetry
-  - Suspension
-  - Drivetrain
-    - Motor transmission
-  - Powertrain
-    - Admission, cooling, exaustion
-  - Breaks
-  - Aerodynamics
-  - Structure
-    - Chassi
-
-| Calendar                      |
-| ----------------------------- |
-| May/June: sensoring deadline  |
-| August: tests                 |
-| September: telemetry deadline |
-| November/December: contest    |

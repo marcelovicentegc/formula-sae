@@ -11,7 +11,7 @@
 | Method                                         | Status    |
 | ---------------------------------------------- | --------- |
 | .txt (Serial capture to a file via Processing) | Covered   |
-| .xls (Serial capture to a file via Processing) | Uncovered |
+| .xls (Serial capture to a file via Processing) | Covered   |
 | SD card                                        | Uncovered |
 | Database (via HTTP/MQTT)                       | Uncovered |
 
